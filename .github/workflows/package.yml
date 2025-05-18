@@ -23,6 +23,8 @@ jobs:
         shell: sh
         run: |
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
+          mkdir -p dist
+          cp -R /addons/ /dist/addons/
 
       - name: Upload Plugin Package
         uses: actions/upload-artifact@v4
@@ -30,5 +32,4 @@ jobs:
           include-hidden-files: true
           name: amplify-godot-engine-plugin
           path: |
-            ${{ github.workspace }}/
-            !${{ github.workspace }}/**
+            ${{ github.workspace }}/dist/
