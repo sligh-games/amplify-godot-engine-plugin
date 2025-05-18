@@ -22,6 +22,7 @@ jobs:
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
           mkdir -p ${{ github.workspace }}/dist/
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
+          zip -r ${{ github.workspace }}/Plugin.zip ${{ github.workspace }}/dist/
 
       #- name: Upload Plugin Package
       #  uses: actions/upload-artifact@v4
@@ -35,7 +36,7 @@ jobs:
         uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/dist/
+          file: ${{ github.workspace }}/Plugin.zip
           asset_name: Plugin
           tag: ${{ github.ref }}
           overwrite: true
