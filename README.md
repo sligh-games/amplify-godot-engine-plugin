@@ -1,22 +1,20 @@
 ## AWS Amplify for Godot Engine - Plugin 
 
-[![GitHub release](https://img.shields.io/github/release/aws-samples/amplify-godot-engine-plugin)](https://github.com//aws-samples/amplify-godot-engine-plugin/releases)
-[![Open Bugs](https://img.shields.io/github/issues/aws-samples/amplify-godot-engine-plugin/bug?color=d73a4a&label=bugs)](https://github.com/aws-samples/amplify-godot-engine-plugin/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![Feature Requests](https://img.shields.io/github/issues/aws-samples/amplify-godot-engine-plugin/feature-request?color=ff9001&label=feature%20requests)](https://github.com/aws-samples/amplify-godot-engine-plugin/issues?q=is%3Aissue+label%3Afeature-request+is%3Aopen)
-[![Closed Issues](https://img.shields.io/github/issues-closed/aws-samples/amplify-godot-engine-plugin?color=%2325CC00&label=issues%20closed)](https://github.com/aws-samples/amplify-godot-engine-plugin/issues?q=is%3Aissue+is%3Aclosed+)
+[![GitHub release](https://img.shields.io/github/release/sligh-games/amplify-godot-engine-plugin)](https://github.com//sligh-games/amplify-godot-engine-plugin/releases)
+[![Open Bugs](https://img.shields.io/github/issues/sligh-games/amplify-godot-engine-plugin/bug?color=d73a4a&label=bugs)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
+[![Feature Requests](https://img.shields.io/github/issues/sligh-games/amplify-godot-engine-plugin/feature-request?color=ff9001&label=feature%20requests)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+label%3Afeature-request+is%3Aopen)
+[![Closed Issues](https://img.shields.io/github/issues-closed/sligh-games/amplify-godot-engine-plugin?color=%2325CC00&label=issues%20closed)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+is%3Aclosed+)
 
 This project contains a Godot Engine plugin to interact with AWS Amplify deployed resources on AWS.
 
-_Note: “The sample code; software libraries; command line tools; proofs of concept; templates; or other related technology (including any of the foregoing that are provided by our personnel) is provided to you as AWS Content under the AWS Customer Agreement, or the relevant written agreement between you and AWS (whichever applies). You should not use this AWS Content in your production accounts, or on production or other critical data. You are responsible for testing, securing, and optimizing the AWS Content, such as sample code, as appropriate for production grade use based on your specific quality control practices and standards. Deploying AWS Content may incur AWS charges for creating or using AWS chargeable resources, such as running Amazon EC2 instances or using Amazon S3 storage.”_
-
 ## Quickstart
 
-If you need step by step tutorials you can use our [quicktstarts](https://github.com/aws-samples/amplify-godot-engine/wiki/Create-a-New-Game) or explore [labs](https://github.com/aws-samples/amplify-godot-engine/wiki) on the wiki.
+If you need step by step tutorials you can use our [quicktstarts](https://github.com/sligh-games/amplify-godot-engine/wiki/Create-a-New-Game) or explore [labs](https://github.com/sligh-games/amplify-godot-engine/wiki) on the wiki.
 
 ## Install the Plugin
 
 Download the plugin
-1. Go to the [GitHub Release Section](https://github.com/aws-samples/amplify-godot-engine-plugin/releases)
+1. Go to the [GitHub Release Section](https://github.com/sligh-games/amplify-godot-engine-plugin/releases)
 2. Click on the latest release
 3. Download the source code
 4. Extract the plugin code
@@ -38,7 +36,7 @@ You can access each module from the base class direcly with the global variable 
 
 This module offers basic features to send http requests to AWS resources.
 
-You can find the source code [here](https://github.com/aws-samples/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/lib/client.gd).
+You can find the source code [here](https://github.com/sligh-games/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/lib/client.gd).
 
 Here's a list of all the functions with their parameters from the provided AWSAmplifyClient class:
 
@@ -66,7 +64,7 @@ This module is used in other modules such as ```auth``` and ```data```.
 
 This module offers authentication features. 
 
-You can find the source code [here](https://github.com/aws-samples/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/lib/auth.gd).
+You can find the source code [here](https://github.com/sligh-games/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/lib/auth.gd).
 
 ### Sign-Up
 - `sign_up(username, password, options: Dictionary = {})`
@@ -116,7 +114,7 @@ You can find the source code [here](https://github.com/aws-samples/amplify-godot
 
 This module offers GraphQL features.
 
-You can find the source code [here](https://github.com/aws-samples/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/lib/data.gd)
+You can find the source code [here](https://github.com/sligh-games/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/lib/data.gd)
 
 Here's a list of all the functions defined in the AWSAmplifyData class:
 
@@ -129,33 +127,36 @@ Here's a list of all the functions defined in the AWSAmplifyData class:
 
 The plugin offers sign-up, sign-in and sign-out forms to handle various user authentication flows. 
 
-You can find the source code [here](https://github.com/aws-samples/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/ui/auth_form.gd)
+You can find the source code [here](https://github.com/sligh-games/amplify-godot-engine-plugin/blob/main/addons/aws-amplify/runtime/ui/auth_form.gd)
 
-You can find also various samples showing how to use the form [here](https://github.com/aws-samples/amplify-godot-engine-sample/tree/feature/auth_sign_in)
-
-## Wiki
-
-The [wiki](https://github.com/aws-samples/amplify-godot-engine/wiki) contains everything you want to know about getting started with AWS Amplify with the Godot Engine.
+You can find also various samples showing how to use the form [here](https://github.com/sligh-games/amplify-godot-engine-sample/tree/feature/auth_sign_in)
 
 ## Discussions
 
-If you have a question or you want to discuss with the AWS Amplify for Godot Engine community go to the main project [discussions](https://github.com/aws-samples/amplify-godot-engine/discussions) channels.
+Join our community to get help, share ideas, and collaborate:
 
-[![join amplify discord](https://img.shields.io/discord/308323056592486420?logo=discord&label=AWS%20Amplify)](https://discord.gg/jWVbPfC)
+[![join sligh games discord](https://img.shields.io/discord/1371568283307868190?logo=discord&label=Sligh%20Games)](https://discord.gg/qN2q77zNDa)
+[![join aws amplify discord](https://img.shields.io/discord/308323056592486420?logo=discord&label=AWS%20Amplify)](https://discord.gg/amplify)
 [![join godot engine discord](https://img.shields.io/discord/1235157165589794909?logo=discord&label=Godot%20Engine)](https://discord.gg/godotengine)
 
-## Issues
-
-If you have any issue with a custom build image [report a bug](https://github.com/aws-samples/amplify-godot-engine-plugin/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=) and if you need a new image or something else  [create a feature request](https://github.com/aws-samples/amplify-godot-engine-plugin/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=).
+For technical questions and feature discussions, visit our [GitHub Discussions](https://github.com/orgs/sligh-games/discussions).
 
 ## Security
 
-See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
+If you discover a potential security issue, please DO NOT create a public GitHub issue. Instead, send an email directly to [security@sligh.games](mailto:security@sligh.games). This helps us address security vulnerabilities promptly and responsibly.
+
+## Issues
+
+If you have any issue with a custom build image [report a bug](https://github.com/sligh-games/amplify-godot-engine-plugin/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=) and if you need a new image or something else [create a feature request](https://github.com/sligh-games/amplify-godot-engine-plugin/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=).
+
+## Contributing
+
+See [CONTRIBUTING](CONTRIBUTING.md) for more information.
 
 ## License
 
-This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE.md) file.
+This library is licensed under the MIT License. See the [LICENSE](LICENSE.md) file.
 
 ## Third Party Licenses
 
-See [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES) for more information.
+See [THIRD_PARTY_LICENSES](THIRD_PARTY_LICENSES.md) for more information.

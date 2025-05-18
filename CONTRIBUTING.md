@@ -45,13 +45,12 @@ Looking at the existing issues is a great way to find something to contribute on
 
 
 ## Code of Conduct
-This project has adopted the [Amazon Open Source Code of Conduct](https://aws.github.io/code-of-conduct).
-For more information see the [Code of Conduct FAQ](https://aws.github.io/code-of-conduct-faq) or contact
-opensource-codeofconduct@amazon.com with any additional questions or comments.
+This project has adopted the Contributor Covenant Code of Conduct.
+For more information see the [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) file.
 
 
 ## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify AWS/Amazon Security via our [vulnerability reporting page](http://aws.amazon.com/security/vulnerability-reporting/). Please do **not** create a public github issue.
+If you discover a potential security issue in this project we ask that you notify Sligh Games Security via email at [security@sligh.games](mailto:security@sligh.games). Please do **not** create a public github issue.
 
 
 ## Licensing

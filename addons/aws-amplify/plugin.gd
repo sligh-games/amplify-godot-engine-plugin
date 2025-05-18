@@ -3,11 +3,6 @@
 ## This plugin integrates AWS Amplify functionality into Godot projects,
 ## allowing easy access to AWS backend resources.
 ##
-## @tutorial: https://github.com/aws-samples/amplify-godot-engine/wiki
-## @tutorial: https://github.com/aws-samples/amplify-godot-engine-template
-## @tutorial: https://github.com/aws-samples/amplify-godot-engine-custom-build-image
-## @tutorial: https://github.com/aws-samples/amplify-godot-engine-plugin
-## @tutorial: https://github.com/aws-samples/amplify-godot-engine-sample
 
 @tool
 class_name AWSAmplifyPlugin
@@ -20,7 +15,7 @@ const AWS_AMPLIFY_PLUGIN_NAME = "AWS Amplify"
 const AWS_AMPLIFY_PLUGIN_ICON: Texture2D = preload("res://addons/aws-amplify/plugin/icons/logo.svg")
 
 ## Home page URL for the AWS Amplify plugin.
-const AWS_AMPLIFY_PLUGIN_HOME: String = "https://github.com/aws-samples/amplify-godot-engine-plugin"
+const AWS_AMPLIFY_PLUGIN_HOME: String = "https://github.com/sligh-games/amplify-godot-engine-plugin"
 
 ## Name of the AWS Amplify singleton.
 const AWS_AMPLIFY_NAME = "aws_amplify"
@@ -34,7 +29,7 @@ func _enter_tree() -> void:
 	add_autoload_singleton(AWS_AMPLIFY_NAME, AWS_AMPLIFY_PATH)
 	
 	# Display welcome message
-	print("%s Plugin v%s (c) 2024-present Amazon, Inc" % [AWS_AMPLIFY_PLUGIN_NAME, get_plugin_version()])
+	print("%s Plugin v%s (c) 2024-present Sligh Games" % [AWS_AMPLIFY_PLUGIN_NAME, get_plugin_version()])
 	print("Use '%s' singleton to access AWS Amplify backend resources" % [AWS_AMPLIFY_NAME])
 	print("Please visit %s!" % [AWS_AMPLIFY_PLUGIN_HOME])
 		
