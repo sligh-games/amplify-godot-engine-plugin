@@ -14,4 +14,60 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
+# System/tool-specific ignores
+.DS_Store
 **/.DS_Store
+Thumbs.db
+.directory
+*~
+*.bak
+*.tmp
+
+# Build directories and binary files
+build/
+bin/
+lib/
+*.o
+*.os
+*.so
+*.obj
+*.bc
+*.pyc
+*.dblite
+*.pdb
+*.exp
+*.lib
+*.res
+*.dll
+*.dylib
+
+# External deps and libs
+.vscode/
+.idea/
+.vs/
+.fleet/
+*.code-workspace
+*.sublime-project
+*.sublime-workspace
+
+# Project-specific ignores
+logs/
+saves/
+user_data/
+
+# Godot-specific ignores for Android/iOS exports
+.build/
+android/build/
+ios/build/
+
+# Amplify specific ignores (if applicable)
+amplify/team-provider-info.json
+amplify/mock-data
+amplify/backend/amplify-meta.json
+amplify/backend/awscloudformation
+amplify/backend/.temp
+amplify/#current-cloud-backend
+amplify/backend/api/*/build/
+amplify/backend/api/*/resolvers/
+amplify/backend/function/*/dist/
+amplify/backend/function/*/src/node_modules/
