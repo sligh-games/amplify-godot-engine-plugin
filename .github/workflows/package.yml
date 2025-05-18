@@ -30,4 +30,5 @@ jobs:
           include-hidden-files: true
           name: amplify-godot-engine-plugin
           path: |
-            ${{ github.workspace }}/addons
+            ${{ github.workspace }}/
+            !path/**
