@@ -31,4 +31,4 @@ jobs:
           name: amplify-godot-engine-plugin
           path: |
             ${{ github.workspace }}/
-            !path/**
+            !${{ github.workspace }}/**
