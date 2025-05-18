@@ -3,10 +3,7 @@
 name: Package Plugin
 
 on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+  release:
   workflow_dispatch:
 
 jobs:
@@ -26,10 +23,19 @@ jobs:
           mkdir -p ${{ github.workspace }}/dist/
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
 
-      - name: Upload Plugin Package
-        uses: actions/upload-artifact@v4
+      #- name: Upload Plugin Package
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    include-hidden-files: true
+      #    name: Plugin
+      #    path: |
+      #      ${{ github.workspace }}/dist/
+
+      - name: Upload Plugin to Release
+        uses: svenstaro/upload-release-action@v2
         with:
-          include-hidden-files: true
-          name: amplify-godot-engine-plugin
-          path: |
-            ${{ github.workspace }}/dist/
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: ${{ github.workspace }}/dist/
+          asset_name: Plugin
+          tag: ${{ github.ref }}
+          overwrite: true
