@@ -2,7 +2,7 @@
 
 [![GitHub release](https://img.shields.io/github/release/sligh-games/amplify-godot-engine-plugin)](https://github.com//sligh-games/amplify-godot-engine-plugin/releases)
 [![Open Bugs](https://img.shields.io/github/issues/sligh-games/amplify-godot-engine-plugin/bug?color=d73a4a&label=bugs)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+is%3Aopen+label%3Abug)
-[![Feature Requests](https://img.shields.io/github/issues/sligh-games/amplify-godot-engine-plugin/feature-request?color=ff9001&label=feature%20requests)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+label%3Afeature-request+is%3Aopen)
+[![Feature Requests](https://img.shields.io/github/issues/sligh-games/amplify-godot-engine-plugin/feature-request?color=ff9001&label=enhancement)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+label%3Aenhancement+is%3Aopen)
 [![Closed Issues](https://img.shields.io/github/issues-closed/sligh-games/amplify-godot-engine-plugin?color=%2325CC00&label=issues%20closed)](https://github.com/sligh-games/amplify-godot-engine-plugin/issues?q=is%3Aissue+is%3Aclosed+)
 
 A powerful Godot Engine plugin that seamlessly integrates AWS Amplify services into your game projects. This plugin enables game developers to leverage AWS cloud capabilities directly within the Godot environment, providing authentication, data storage, API access, and more with minimal configuration.
@@ -20,9 +20,11 @@ A powerful Godot Engine plugin that seamlessly integrates AWS Amplify services i
 
 For comprehensive documentation, tutorials, and examples, visit our [official documentation](https://docs.sligh.games/#!/en/amplify-godot).
 
-## Quickstart
+## Getting Started
 
-If you need step-by-step tutorials, you can use our [quickstarts](https://docs.sligh.games/#!/en/amplify-godot/get-started) or explore [interactive labs](https://docs.sligh.games/#!/en/amplify-godot) on our documentation site.
+Jump right into your Godot CI/CD pipeline with our comprehensive resources:
+- **Quick Setup**: Follow our [quickstart guides](https://docs.sligh.games/#!/en/amplify-godot/get-started) for step-by-step implementation
+- **Advanced Usage**: Explore [interactive labs](https://docs.sligh.games/#!/en/amplify-godot) for deeper integration scenarios
 
 ## Installation
 
