@@ -1,0 +1,33 @@
+# Package AWS Amplify Godot Engine Plugin
+
+name: Package Plugin
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Plugin
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+        
+      - name: Include Files
+        shell: sh
+        run: |
+          cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
+
+      - name: Upload Plugin Package
+        uses: actions/upload-artifact@v4
+        with:
+          include-hidden-files: true
+          name: amplify-godot-engine-plugin
+          path: |
+            ${{ github.workspace }}/addons/
