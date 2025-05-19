@@ -28,6 +28,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           include-hidden-files: true
-          name: Plugin${{ github.ref }}
+          name: Plugin${{ github.ref_name }}
           path: |
             ${{ github.workspace }}/dist/
