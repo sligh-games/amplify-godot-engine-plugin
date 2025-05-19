@@ -3,7 +3,7 @@
 
 # Only include the addons folder when downloading from the Asset Library.
 /**             export-ignore
-/README.md      !export-ignore
-/LICENSE.md     !export-ignore
+/README.md      export-subst=addons/aws-amplify/README.md
+/LICENSE.md     export-subst=addons/aws-amplify/LICENSE.md
 /addons         !export-ignore
 /addons/**      !export-ignore
