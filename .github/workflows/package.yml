@@ -24,7 +24,8 @@ jobs:
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
           mkdir -p ${{ github.workspace }}/dist/
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
-          zip -r ${{ github.workspace }}/AWSAmplifyPlugin.zip ${{ github.workspace }}/dist/
+          cd ${{ github.workspace }}/dist/
+          zip -r ../AWSAmplifyPlugin.zip .
 
       - name: Release
         id: create_release
@@ -37,7 +38,6 @@ jobs:
           generate_release_notes: true
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
-          #body_path: CHANGELOG.md
 
       - name: Upload Plugin
         uses: actions/upload-release-asset@v1
