@@ -5,7 +5,7 @@ name: Package Plugin
 on:
   push:
       tags:        
-        - '**'     
+        - '*'     
   workflow_dispatch:
 
 jobs:
