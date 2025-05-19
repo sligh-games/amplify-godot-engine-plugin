@@ -33,7 +33,6 @@ Jump right into your Godot CI/CD pipeline with our comprehensive resources:
 | Version | Godot Compatibility | Download | Changelog |
 | --- | --- | --- | --- |
 | 0.3.2 | 4.3+ | [Download](https://github.com/sligh-games/amplify-godot-engine-plugin/releases/download/v0.3.2/AWSAmplifyPlugin.zip) | [View](https://github.com/sligh-games/amplify-godot-engine-plugin/blob/main/CHANGELOG.md#032---2025-05-19) |
-| 0.3.1 | 4.3+ | [Download](https://github.com/sligh-games/amplify-godot-engine-plugin/releases/download/v0.3.1/AWSAmplifyPlugin.zip) | [View](https://github.com/sligh-games/amplify-godot-engine-plugin/blob/main/CHANGELOG.md#031---2025-05-19) |
 
 ### Download the Plugin
 
