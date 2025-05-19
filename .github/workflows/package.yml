@@ -27,21 +27,21 @@ jobs:
           zip -r ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip ${{ github.workspace }}/dist/
 
       - name: Release
-        uses: softprops/action-gh-release@v2
         id: create_release
+        uses: softprops/action-gh-release@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.RELEASE }}
         with:
           draft: false
           prerelease: false
           name: ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
           body_path: CHANGELOG.md
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
 
       - name: Upload Plugin
         uses: actions/upload-release-asset@v1
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: ${{ secrets.RELEASE }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip
