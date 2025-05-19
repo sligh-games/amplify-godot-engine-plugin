@@ -23,9 +23,8 @@ jobs:
         run: |
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
           mkdir -p ${{ github.workspace }}/dist/
-          cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
-          cd ${{ github.workspace }}/dist/
-          zip -r ../AWSAmplifyPlugin.zip .
+          cp -R ${{ github.workspace }}/addons/** ${{ github.workspace }}/dist/addons/
+          zip -r ${{ github.workspace }}/AWSAmplifyPlugin.zip ${{ github.workspace }}/dist/**
 
       - name: Release
         id: create_release
