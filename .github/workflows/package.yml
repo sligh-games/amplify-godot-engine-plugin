@@ -3,7 +3,10 @@
 name: Package Plugin
 
 on:
-  release:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
   workflow_dispatch:
 
 jobs:
@@ -24,19 +27,10 @@ jobs:
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
           zip -r ${{ github.workspace }}/Plugin.zip ${{ github.workspace }}/dist/
 
-      #- name: Upload Plugin Package
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    include-hidden-files: true
-      #    name: Plugin
-      #    path: |
-      #      ${{ github.workspace }}/dist/
-
-      - name: Upload Plugin to Release
-        uses: svenstaro/upload-release-action@v2
+      - name: Upload Plugin Package
+        uses: actions/upload-artifact@v4
         with:
-          repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: ${{ github.workspace }}/Plugin.zip
-          asset_name: Plugin
-          tag: ${{ github.ref }}
-          overwrite: true
+          include-hidden-files: true
+          name: Plugin${{ github.ref }}
+          path: |
+            ${{ github.workspace }}/dist/
