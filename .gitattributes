@@ -5,5 +5,7 @@
 /**             export-ignore
 /addons         !export-ignore
 /addons/**      !export-ignore
+/README.md      !export-ignore
 /README.md      export-subst=/addons/aws-amplify/README.md
+/LICENSE.md     !export-ignore
 /LICENSE.md     export-subst=/addons/aws-amplify/LICENSE.md
