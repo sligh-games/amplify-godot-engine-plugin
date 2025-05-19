@@ -26,20 +26,13 @@ jobs:
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
           zip -r ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip ${{ github.workspace }}/dist/
 
-      #- name: Upload Artefact
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    include-hidden-files: true
-      #    name: AWSAmplifyPlugin_${{ github.ref_name }}.zip
-      #    path: ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip
-
       - name: Release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         id: create_release
         with:
           draft: false
           prerelease: false
-          release_name: ${{ steps.version.outputs.version }}
+          name: ${{ github.ref_name }}
           tag_name: ${{ github.ref }}
           body_path: CHANGELOG.md
         env:
