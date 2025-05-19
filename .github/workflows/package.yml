@@ -18,26 +18,34 @@ jobs:
         with:
           submodules: recursive
         
-      - name: Include Files
+      - name: Package Plugin
         shell: sh
         run: |
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
           mkdir -p ${{ github.workspace }}/dist/
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
-
-      - name: Zip Files
-        shell: sh
-        run: |
           zip -r ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip ${{ github.workspace }}/dist/
 
-      - name: Upload Artefact
-        uses: actions/upload-artifact@v4
-        with:
-          include-hidden-files: true
-          name: AWSAmplifyPlugin_${{ github.ref_name }}.zip
-          path: ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip
+      #- name: Upload Artefact
+      #  uses: actions/upload-artifact@v4
+      #  with:
+      #    include-hidden-files: true
+      #    name: AWSAmplifyPlugin_${{ github.ref_name }}.zip
+      #    path: ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip
 
-      - name: Upload Release
+      - name: Release
+        uses: actions/create-release@v1
+        id: create_release
+        with:
+          draft: false
+          prerelease: false
+          release_name: ${{ steps.version.outputs.version }}
+          tag_name: ${{ github.ref }}
+          body_path: CHANGELOG.md
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+
+      - name: Upload Plugin
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ github.token }}
