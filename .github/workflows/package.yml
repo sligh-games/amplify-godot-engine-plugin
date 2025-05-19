@@ -24,12 +24,25 @@ jobs:
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
           mkdir -p ${{ github.workspace }}/dist/
           cp -R ${{ github.workspace }}/addons/ ${{ github.workspace }}/dist/addons/
-          zip -r ${{ github.workspace }}/Plugin.zip ${{ github.workspace }}/dist/
 
-      - name: Upload Plugin Package
+      - name: Zip Files
+        shell: sh
+        run: |
+          zip -r ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip ${{ github.workspace }}/dist/
+
+      - name: Upload Artefact
         uses: actions/upload-artifact@v4
         with:
           include-hidden-files: true
           name: AWSAmplifyPlugin_${{ github.ref_name }}.zip
-          path: |
-            ${{ github.workspace }}/dist/
+          path: ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip
+
+      - name: Upload Release
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ${{ github.workspace }}/AWSAmplifyPlugin_${{ github.ref_name }}.zip
+          asset_name: AWSAmplifyPlugin_${{ github.ref_name }}.zip
+          asset_content_type: application/zip
