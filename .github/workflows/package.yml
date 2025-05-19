@@ -3,7 +3,9 @@
 name: Package Plugin
 
 on:
-  release:
+  push:
+      tags:        
+        - '**'     
   workflow_dispatch:
 
 jobs:
