@@ -9,6 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Upcoming features and improvements
 
+## [0.3.2] - 2025-05-19
+### Added
+- Plugin icon for better visibility in Godot's plugin manager
+### Changed
+- Improved documentation and examples
+### Fixed
+- Minor bug fixes and performance improvements
+
 ## [0.3.1] - 2025-05-19
 ### Added
 - Authentication module with comprehensive user management
@@ -36,5 +44,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## How to Upgrade
 Please refer to our [documentation](https://docs.sligh.games/#!/en/amplify-godot) for detailed upgrade instructions between versions.
 
-[Unreleased]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.1...HEAD
+[Unreleased]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.2...HEAD
+[0.3.2]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/sligh-games/amplify-godot-engine-plugin/releases/tag/v0.3.1
