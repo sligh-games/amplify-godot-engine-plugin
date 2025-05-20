@@ -24,7 +24,6 @@ jobs:
           cp '${{ github.workspace }}/README.md' '${{ github.workspace }}/LICENSE.md' ${{ github.workspace }}/addons/aws-amplify/
           mkdir -p ${{ github.workspace }}/dist/
           mv ${{ github.workspace }}/addons ${{ github.workspace }}/dist/
-          mv ${{ github.workspace }}/demos ${{ github.workspace }}/dist/
           cd ${{ github.workspace }}/dist/
           zip -r ${{ github.workspace }}/AWSAmplifyPlugin.zip .
 
