@@ -15,7 +15,7 @@ const CONFIG_EMAIL = "email"
 const OPTIONS_USER_ATTRIBUTES = AWSAmplifyAuth.AuthOptions.USER_ATTRIBUTES
 const UserAttributes = AWSAmplifyAuth.UserAttributes
 
-var amplify: AWSAmplify = aws_amplify
+var amplify: AWSAmplify = null
 var config: Dictionary = {}
 
 # Form
@@ -37,6 +37,7 @@ var config: Dictionary = {}
 @onready var forgot_password_confirm_password_confirmation: AuthPassword = %ForgotPasswordConfirmPasswordConfirmationContainer
 @onready var forgot_password_confirm_button: Button = %ForgotPasswordConfirmButton
 @onready var forgot_password_confirm_message: AuthMessage = %ForgotPasswordConfirmMessage
+
 
 ## Handles input changes in the sign-in form.
 ##
@@ -289,6 +290,8 @@ func _on_sign_out_refresh_link_pressed() -> void:
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	amplify = aws_amplify
+
 	amplify.auth.user_signed_in.connect(_on_user_signed_in)
 	amplify.auth.user_signed_out.connect(_on_user_signed_out)
 		
