@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Upcoming features and improvements
 
+## [0.3.3] - 2025-05-26
+### Fixed
+- Authentication flow in auth.gd by ensuring tokens are cleared before emitting signals
+- Improved auth_form.gd with better initialization and error handling:
+  - Added null check for sign_up visibility
+  - Added auto-detection of aws_amplify singleton availability
+  - Added automatic UI state handling based on sign-in status
+  - Fixed token expiration time display using proper API
+### Changed
+- Updated scene references with UIDs for better compatibility
+- Added LICENSE.md and README.md files to the plugin directory
+
 ## [0.3.2] - 2025-05-19
 ### Added
 - Plugin icon for better visibility in Godot's plugin manager
@@ -44,6 +56,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## How to Upgrade
 Please refer to our [documentation](https://docs.sligh.games/#!/en/amplify-godot) for detailed upgrade instructions between versions.
 
-[Unreleased]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.2...HEAD
+[Unreleased]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.3...HEAD
+[0.3.3]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.2...v0.3.3
 [0.3.2]: https://github.com/sligh-games/amplify-godot-engine-plugin/compare/v0.3.1...v0.3.2
 [0.3.1]: https://github.com/sligh-games/amplify-godot-engine-plugin/releases/tag/v0.3.1
