@@ -345,8 +345,8 @@ func global_sign_out():
 	var response = await _client.post_json(_endpoint, headers, body)
 	
 	if response.status == ResponseStatus.SUCCESS:
-		user_signed_out.emit(_user_attributes)
 		_clear_tokens()
+		user_signed_out.emit(_user_attributes)
 		
 	return response
 
@@ -370,8 +370,8 @@ func revoke_token():
 	var response = await _client.post_json(_endpoint, headers, body)
 	
 	if response.status == ResponseStatus.SUCCESS:
+		_clear_tokens()		
 		user_signed_out.emit(_user_attributes)
-		_clear_tokens()
 	else:
 		print(response.error)
 		

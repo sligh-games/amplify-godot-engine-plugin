@@ -1,9 +1,9 @@
 [gd_scene load_steps=8 format=3 uid="uid://26gyqrboxy1k"]
 
-[ext_resource type="Script" path="res://addons/aws-amplify/runtime/ui/auth_form.gd" id="1_7j042"]
+[ext_resource type="Script" uid="uid://dqseijtra7mq4" path="res://addons/aws-amplify/runtime/ui/auth_form.gd" id="1_7j042"]
 [ext_resource type="Theme" uid="uid://drygnk7v6ouc3" path="res://addons/aws-amplify/runtime/ui/auth_theme.tres" id="1_dpnkq"]
 [ext_resource type="PackedScene" uid="uid://s67h7oeyu0n6" path="res://addons/aws-amplify/runtime/ui/auth_password.tscn" id="2_10omg"]
-[ext_resource type="Script" path="res://addons/aws-amplify/runtime/ui/auth_message.gd" id="4_erk2g"]
+[ext_resource type="Script" uid="uid://dsvvys0lnd1g7" path="res://addons/aws-amplify/runtime/ui/auth_message.gd" id="4_erk2g"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_1puki"]
 keycode = 4194309

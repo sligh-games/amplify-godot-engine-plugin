@@ -178,7 +178,7 @@ func _on_sign_up_sign_in_link_pressed() -> void:
 
 ## Resets the sign-up form when it becomes visible.
 func _on_sign_up_visibility_changed() -> void:
-	if sign_up.visible:
+	if sign_up and sign_up.visible:
 		sign_up_username.text = ""
 		sign_up_password.password.text = ""
 		sign_up_password_confirmation.password.text = ""
@@ -290,7 +290,11 @@ func _on_sign_out_refresh_link_pressed() -> void:
 
 ## Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	amplify = aws_amplify
+	if ProjectSettings.has_setting("autoload/aws_amplify"):
+		amplify = aws_amplify
+	else:
+		push_warning("AuthForm: 'aws_amplify' singleton is not available!")
+		return
 
 	amplify.auth.user_signed_in.connect(_on_user_signed_in)
 	amplify.auth.user_signed_out.connect(_on_user_signed_out)
@@ -298,6 +302,14 @@ func _ready() -> void:
 	auth_tab.set_tab_title(0, "Sign-In")
 	auth_tab.set_tab_title(1, "Sign-Up")
 	
+	var signed_in = amplify.auth.is_signed_in()
+	auth_tab.visible = !signed_in
+	sign_out.visible = signed_in
+	
+	if signed_in:
+		var username = amplify.auth.get_username_attribute()
+		sign_out_e_mail.text = amplify.auth.get_user_attribute(username)
+			
 	_load_user_config()
 	
 	if config.has(CONFIG_EMAIL):
@@ -312,7 +324,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if sign_out.visible:
 		var time_dictionary = Time.get_datetime_dict_from_unix_time(
-			amplify._auth.get_user_access_token_expiration_time()-Time.get_unix_time_from_system()
+			amplify.auth.get_token_expiration_time()-Time.get_unix_time_from_system()
 		)
 		var time = "%d:%d:%d" % [time_dictionary["hour"], time_dictionary["minute"], time_dictionary["second"]]
 		sign_out_refresh_counter.text = time
